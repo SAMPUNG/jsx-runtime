@@ -11,8 +11,8 @@ export default defineConfig({
     emptyOutDir: true,
     lib: {
       entry: './core/jsx-runtime.ts',
-      fileName: 'jsx-runtime',
-      formats: ['es'],
+      fileName: 'index',
+      formats: ['es', 'cjs'],
       name: 'jsxRuntime',
     },
     manifest: false,
