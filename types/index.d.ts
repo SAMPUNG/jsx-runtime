@@ -1,3 +1,5 @@
+/// <reference types="./jsx" />
+
 export declare function html5(
   tag: Function | string,
   attrs?: { [key: string]: any },
