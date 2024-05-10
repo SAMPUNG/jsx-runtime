@@ -10,7 +10,7 @@ export default defineConfig({
     cssCodeSplit: true,
     emptyOutDir: true,
     lib: {
-      entry: './core/jsx-runtime.ts',
+      entry: './core/index.ts',
       fileName: 'index',
       formats: ['es', 'cjs'],
       name: 'jsxRuntime',
