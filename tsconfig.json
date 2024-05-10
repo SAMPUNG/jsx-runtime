@@ -33,6 +33,7 @@
   },
   "include": [
     "core/**/*.ts",
+    "demo/**/*.ts",
     "demo/**/*.tsx",
     "types/**/*.d.ts",
     "vite-env.d.ts",

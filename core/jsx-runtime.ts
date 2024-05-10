@@ -22,7 +22,6 @@ const AttributeMapper = (val: string) =>
     readOnly: 'readonly',
   }[val] || val)
 
-// tslint:disable-next-line:no-default-export
 export function html5(
   tag: Function | string,
   attrs?: { [key: string]: any },
@@ -37,6 +36,7 @@ export function html5(
     return tag(attrs)
   }
 
+  // Support some SVG elements
   const svgs = ['svg', 'g', 'path']
   const elm = svgs.includes(tag)
     ? document.createElementNS('http://www.w3.org/2000/svg', tag)

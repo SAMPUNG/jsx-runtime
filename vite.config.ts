@@ -27,7 +27,7 @@ export default defineConfig({
     jsx: 'transform',
     jsxFactory: 'html5',
     jsxFragment: 'fragment',
-    jsxInject: `import { html5, fragment } from 'core/jsx-runtime'\n\n`,
+    jsxInject: `import { html5, fragment } from '../core/jsx-runtime'\n\n`,
   },
   publicDir: false,
 })
