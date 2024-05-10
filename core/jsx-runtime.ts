@@ -79,9 +79,10 @@ export function html5(
   return elm
 }
 
-export const fragment = (
-  _attrs?: { [key: string]: any },
-  ...children: (HTMLElement | string)[]
-): (HTMLElement | string)[] => {
-  return children
+export const fragment = (attrs: {
+  children: (HTMLElement | string)[]
+}): HTMLElement | string => {
+  const slot = document.createElement('slot')
+  slot.append(...attrs.children)
+  return slot
 }
