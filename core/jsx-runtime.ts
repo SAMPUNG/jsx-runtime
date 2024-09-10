@@ -54,7 +54,7 @@ export function html5(
     } else if (val === true) {
       elm.setAttribute(name, name)
     } else if (val !== false && val != null) {
-      elm.setAttribute(name, encodeURI(val))
+      elm.setAttribute(name, val)
     } else if (val === false) {
       elm.removeAttribute(name)
     }
