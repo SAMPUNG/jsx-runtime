@@ -1,8 +1,5 @@
 declare namespace JSX {
-  export interface HTMLAttributes<RefType extends EventTarget = EventTarget>
-    extends ClassAttributes<RefType>,
-      DOMAttributes<RefType>,
-      AriaAttributes {
+  export interface HTMLAttributes {
     // Standard HTML Attributes
     accept?: string
     acceptCharset?: string
@@ -227,8 +224,7 @@ declare namespace JSX {
     ref?: (elm: HTMLElement) => any
   }
 
-  export interface SVGAttributes<Target extends EventTarget = SVGElement>
-    extends HTMLAttributes<Target> {
+  export interface SVGAttributes extends HTMLAttributes {
     accentHeight?: number | string
     accumulate?: 'none' | 'sum'
     additive?: 'replace' | 'sum'
@@ -483,7 +479,7 @@ declare namespace JSX {
     zoomAndPan?: string
   }
 
-  type Element = string
+  type Element = HTMLElement | SVGElement
   export interface IntrinsicElements {
     // HTML
     a: HTMLAttributes<HTMLAnchorElement>
